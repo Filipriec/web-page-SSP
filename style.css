@@ -1,0 +1,51 @@
+@font-face {
+    src: url(fonts/Lato-Regular.ttf);
+    font-family: latorgl;
+  }
+@font-face {
+    font-family: latobld;
+    src: url(fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: latothn;
+    src: url(fonts/Lato-Thin.ttf);
+}
+
+
+body {
+    background-color: #2b414e;
+    font: normal 18px  latorgl;
+    color: rgb(250, 235, 235);
+}
+
+h1 {
+    font-family: latothn;
+    font-size: 100px;
+    font-style: italic;
+    color: aquamarine;
+}
+
+.bgclr {
+    color: #2b414e;
+}
+button {
+    font-family: latobld;
+    color: blueviolet;
+    font-size: 50px;
+    height: 150px;
+    width: 300px;
+    background-color: #2b414e;
+    border: 2px solid beige;
+    cursor: pointer;
+
+}
+.centre{
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}
+button:hover {
+    background-color:rgb(133, 133, 60);
+    transition: background-color 300ms ease-in;
+}
