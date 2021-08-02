@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/filip/Documents/programming/web page SSP'
+make: Leaving directory '/home/filip/Documents/programming/web page SSP'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 

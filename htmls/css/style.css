@@ -10,6 +10,7 @@
     font-family: latothn;
     src: url(fonts/Lato-Thin.ttf);
 }
+
 :root{
     --bgclr:#2b414e;
 }
@@ -24,7 +25,7 @@ body {
 }
 
 
-
+/* start of dropdown menu */
 button:hover {
     background-color:#346380;
     transition: background-color 200ms ease-in;
@@ -52,7 +53,7 @@ button:focus {
     background-color: coral;
 
 }
-.dropdown button, .notxtdecor{
+.dropdown button {
     font-family: latobld;
     color: burlywood;
     font-size: 22px;
@@ -67,6 +68,7 @@ button:focus {
     border: 2px solid beige;
     cursor: pointer;
     text-decoration: none;
+    border-radius: 1px;
 }
 
 .dropdown button:hover {
@@ -96,6 +98,13 @@ button:focus {
     pointer-events: none;
     transform: translateY(-10px);
     transition: all 0.4s ease;
+    border-radius: 3px;
+}
+.drp2 ul{
+    height: 250px;
+}
+.drp3 ul{
+    height: 100px;
 }
 .drp2 a, .drp3 a, .drp4 a, .drp5 a, .drp6 a {
     color: black;
@@ -103,6 +112,13 @@ button:focus {
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+}
+.drp5 a{
+    color: burlywood;
+}
+.drp2 a, .drp3 a{
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .drp2 li, .drp3 li, .drp4 li, .drp5 li, .drp6 li {
     width: 100%;
@@ -124,4 +140,95 @@ button:focus {
 .drp2 button:focus-within + ul, .drp3 button:focus-within + ul, .drp4 button:focus-within + ul, .drp5 button:focus-within + ul, .drp6 button:focus-within + ul{
     opacity: 1;
     visibility: visible;
+}
+.drp5 {
+    opacity: 0;
+    pointer-events: none;
+}
+/* end of dropdown menu */
+
+/*zaciatok spodnej listicky*/
+.spodny-div {
+    background-color: rgb(161, 143, 110);
+    width: 100%;
+    height: 15%;
+    top:85%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+.patreon {
+    width: 25px;
+    height: 25px;
+}
+.soc-media-positioning {
+    left: 85%;
+    position: fixed;
+}
+.thanks{
+    color: black;
+    font-size: 11px;
+    left: 10%;
+    top: 65%;
+    position: absolute;
+}
+.final-word {
+    color: black;
+    left: 10%;
+    top: 10%;
+    position: absolute;
+    font-size: 16px;
+    word-spacing: 1px;
+}
+/*lang changer */
+.lang {
+    color: black;
+    position:relative;
+    left: 90.7%;
+    top: 10px;
+    width: 80px;
+    margin:0;
+    height: 30px;
+    
+}
+.langf {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.lang-line-x {
+    background-color: crimson;
+    width: 80px;
+    height: 1px;
+    top: 8%;
+    position: absolute;
+}
+.lang-space {
+    position: relative;
+    height: 30px;
+    width: 100%;
+}
+.lang-line-y {
+    background-color: crimson;
+    width: 1px;
+    height: 16px;
+    top: 0;
+}
+
+.lang button{
+    border: 0;
+    margin: 0;
+    width: 40px;
+    background-color: var(--bgclr);
+    color: blanchedalmond;
+    cursor: pointer;
+}
+.lang button:hover{
+    color:rgb(172, 78, 78);
+    transition: background-color 200ms ease-in;
+}
+.langf a {
+    text-decoration: none;
 }
