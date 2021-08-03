@@ -42,6 +42,7 @@ button:focus {
     width: 1000px;
     align-items:center;
     margin:auto;
+    
 }
 .dropdown-position{
     width: 1000px;
@@ -169,7 +170,7 @@ button:focus {
 }
 .thanks{
     color: black;
-    font-size: 11px;
+    font-size: 13px;
     left: 10%;
     top: 65%;
     position: absolute;
@@ -179,16 +180,17 @@ button:focus {
     left: 10%;
     top: 10%;
     position: absolute;
-    font-size: 16px;
+    font-size: 18px;
     word-spacing: 1px;
 }
+/*spodna listicka done*/
 /*lang changer */
 .lang {
     color: black;
     position:relative;
     left: 90.7%;
     top: 10px;
-    width: 80px;
+    width: 40px;
     margin:0;
     height: 30px;
     
@@ -200,7 +202,7 @@ button:focus {
 }
 .lang-line-x {
     background-color: crimson;
-    width: 80px;
+    width: 40px;
     height: 1px;
     top: 8%;
     position: absolute;
@@ -231,4 +233,20 @@ button:focus {
 }
 .langf a {
     text-decoration: none;
+    color: blanchedalmond;
+    left: 0%;
+    
+}
+/*koniec jazyka*/
+
+/*nadpis*/
+.nadpis{
+    position: absolute;
+    width: 600px;
+    height: 15vh;
+    top: 17%;
+    left: 400px;
+}
+.nadpis h1 {
+    color: burlywood;
 }
