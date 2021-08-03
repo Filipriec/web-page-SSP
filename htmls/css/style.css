@@ -26,10 +26,32 @@ html {
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-position: center;
-    height: 85vh;
-    position:relative;
+    height: 100vh;
+    position:static;
     background-size: cover;
     background-attachment: fixed;
+}
+
+
+.hvr-txt p:hover{
+    margin-top: 0;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.hover-txt{
+    font-family: 'Lato';
+    font-weight: 100;
+    color: purple;
+    font-size: 50px;
+    width: 100px;
+    height: 30px;
+    top: 150vh;
+    left: 50%;
+    position: absolute;
+    background-color: purple;
+}
+.hover-txt p{
+    color: red;
 }
 .sipecka a{
     color: white;
@@ -39,15 +61,58 @@ html {
 
 }
 .sipecka img{
-    position: relative;
+    position: static;
     width: 35px;
+    left: 50%;
+    
+}
+.sipecka img:hover{
+    animation: arrow-ani 0.7s ease-in-out forwards;
+    animation-delay: 0.1s;
+}
+@keyframes arrow-ani{
+    0% {
+        transform: translate(0,0);
+    }
+    20% {
+        transform: translate(0,6px);
+    }
+    65% {
+        transform: translate(0,-10px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+
 }
 .sipecka {
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    height: 85vh;
-
+    height: 83vh;
+    width: 100%;
+}
+.s-click{
+    background-color: rgba(97, 79, 66, 0.117);
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato';
+    color: rgba(255, 255, 255, 0.473);
+}
+.s-click a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.473);
+}
+.s-c-o3 {
+    width: 60px;
+    position: relative;
+    left: 50%;
+    transform: translate(-90px);
+    top: -3vh;
 }
 /*finitko backgroundimage*/
 /*scroll bar*/
@@ -204,13 +269,23 @@ button:focus {
 .spodny-div {
     background-color: rgb(161, 143, 110);
     width: 100%;
-    height: 15%;
-    top:85%;
+    height: 14%;
+    top:87%;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
+    opacity: 0;
+    margin-top: -60px;
+    transform: translateY(60px);
+    transition: all 0.5s ease;
+}
+
+.spodny-div:hover {
+    margin-top: 0;
+    opacity: 1;
+    transform: translateY(0px);
 }
 .patreon {
     width: 25px;
@@ -220,25 +295,39 @@ button:focus {
     left: 85%;
     position: fixed;
 }
+.final-word {
+    color: black;
+    font-family: 'Lato';
+    font-weight: 400;
+    left: 10%;
+    top: 0%;
+    position: absolute;
+    font-size: 18px;
+    word-spacing: 1px;
+}
 .thanks{
     color: black;
     font-family: 'Lato';
     font-weight: 300;
     font-size: 13px;
     left: 10%;
-    top: 65%;
+    top: 60%;
     position: absolute;
 }
-.final-word {
-    color: black;
+.hvr-txt{
+    top: 91%;
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    display: flex;
+    justify-content: center;
     font-family: 'Lato';
-    font-weight: 400;
-    left: 10%;
-    top: 10%;
-    position: absolute;
+    font-weight: 300;
     font-size: 18px;
-    word-spacing: 1px;
+    color:burlywood;
+    background-color: #34638000;
 }
+
 /*spodna listicka done*/
 /*lang changer */
 .lang {
@@ -310,6 +399,7 @@ button:focus {
     font-family: 'Lato';
     font-weight: 400;
 }
+
 /*sections*/
 .section2 {
     background-color: yellowgreen;
