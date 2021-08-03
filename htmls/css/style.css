@@ -1,28 +1,43 @@
-@font-face {
-    src: url(fonts/Lato-Regular.ttf);
-    font-family: latorgl;
-  }
-@font-face {
-    font-family: latobld;
-    src: url(fonts/Lato-Bold.ttf);
-}
-@font-face {
-    font-family: latothn;
-    src: url(fonts/Lato-Thin.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700');
+
 
 :root{
-    --bgclr:#2b414e;
+    --bgclr:#ecf6fc;;
+    /*--bgclr:#2b414e;*/
+    --text-color:black;
+    --borderc:black;
 }
 
 
 body {
     background-color: var(--bgclr);
-    font: normal 18px  latorgl;
+    font-family: 'Lato', sans-serif;
     height: 200vh;
     color: aquamarine;
     
 }
+/*scroll bar*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  /*end of scroll bar*/
 
 
 /* start of dropdown menu */
@@ -55,8 +70,9 @@ button:focus {
 
 }
 .dropdown button {
-    font-family: latobld;
-    color: burlywood;
+    font-family: 'Lato';
+    font-weight: 700;
+    color: var(--text-color);
     font-size: 22px;
     height: 45px;
     width: 140px;
@@ -66,7 +82,7 @@ button:focus {
     justify-content: center;
     align-items: center;
     background-color: var(--bgclr);
-    border: 2px solid beige;
+    border: 2px solid var(--borderc);
     cursor: pointer;
     text-decoration: none;
     border-radius: 1px;
@@ -115,7 +131,7 @@ button:focus {
     padding-right: 20px;
 }
 .drp5 a{
-    color: burlywood;
+    color: var(--text-color);
 }
 .drp2 a, .drp3 a{
     padding-left: 40px;
@@ -170,6 +186,8 @@ button:focus {
 }
 .thanks{
     color: black;
+    font-family: 'Lato';
+    font-weight: 300;
     font-size: 13px;
     left: 10%;
     top: 65%;
@@ -177,6 +195,8 @@ button:focus {
 }
 .final-word {
     color: black;
+    font-family: 'Lato';
+    font-weight: 400;
     left: 10%;
     top: 10%;
     position: absolute;
@@ -186,7 +206,7 @@ button:focus {
 /*spodna listicka done*/
 /*lang changer */
 .lang {
-    color: black;
+    color: var(--text-color);
     position:relative;
     left: 90.7%;
     top: 10px;
@@ -224,7 +244,7 @@ button:focus {
     margin: 0;
     width: 40px;
     background-color: var(--bgclr);
-    color: blanchedalmond;
+    color: var(--text-color);
     cursor: pointer;
 }
 .lang button:hover{
@@ -233,7 +253,9 @@ button:focus {
 }
 .langf a {
     text-decoration: none;
-    color: blanchedalmond;
+    font-family: 'Lato';
+    font-weight: 300;
+    color: var(--text-color);
     left: 0%;
     
 }
@@ -248,5 +270,7 @@ button:focus {
     left: 400px;
 }
 .nadpis h1 {
-    color: burlywood;
+    color: var(--text-color);
+    font-family: 'Lato';
+    font-weight: 400;
 }
