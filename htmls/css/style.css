@@ -5,7 +5,13 @@
     --bgclr:#ecf6fc00;;
     /*--bgclr:#2b414e;*/
     --text-color:white;
-    --borderc:white;
+    --borderc:rgb(247, 230, 200);
+    --menu-bg:rgba(151, 148, 148, 0.219);
+    --click-button-bg:rgba(97, 79, 66, 0.117);
+    --click-button-bg-ac:rgba(66, 54, 45, 0.562);
+    --spodna-lista:rgb(170, 125, 65);
+    --section-bg:rgb(171, 172, 168);
+    --section-a-bg:rgb(224, 224, 224);
 }
 
 
@@ -78,7 +84,7 @@ html {
         transform: translate(0,6px);
     }
     65% {
-        transform: translate(0,-10px);
+        transform: translate(0,-8px);
     }
     100% {
         transform: translate(0,0);
@@ -102,10 +108,18 @@ html {
     align-items: center;
     font-family: 'Lato';
     color: rgba(255, 255, 255, 0.473);
+    
+}
+.s-click:hover{
+    background-color: rgba(66, 54, 45, 0.562);
+    transition: background-color 200ms ease-in;
 }
 .s-click a{
     text-decoration: none;
     color: rgba(255, 255, 255, 0.473);
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .s-c-o3 {
     width: 60px;
@@ -145,26 +159,28 @@ button:hover {
     transition: background-color 200ms ease-in;
 }
 button:focus {
-    background-color:rgb(151, 148, 148);
+    background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
+}
+.dropdown-position{
+    width: 100%;
+    height: 15vh;
+    position: absolute;
+    top: 10%;
+    left: 0;
 }
 .dropdown{
     height: 15vh;
     background-color: var(--bgclr);
     display: flex;
     justify-content: space-around;
-    width: 1000px;
+    width: 50%;
     align-items:center;
     margin:auto;
-    
 }
-.dropdown-position{
-    width: 1000px;
-    height: 15vh;
-    position: absolute;
-    top: 15%;
-    left: 70%;
-    transform: translate(-50%, -50%);
+.dropdown2{
+    position: relative;
+    left: 20%;
 }
 .dropdown button{
     font-family: 'Lato';
@@ -186,11 +202,11 @@ button:focus {
 }
 
 .dropdown button:hover {
-    background-color:#346380;
+    background-color:#34638042;
     transition: background-color 200ms ease-in;
 }
 .dropdown button:focus {
-    background-color:rgb(151, 148, 148);
+    background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
 }
 .drp2, .drp3, .drp4, .drp5, .drp6 {
@@ -198,7 +214,7 @@ button:focus {
 }
 .drp2 ul, .drp3 ul, .drp4 ul, .drp5 ul, .drp6 ul {
     position: absolute;
-    background-color: rgb(151, 148, 148);
+    background-color: var(--menu-bg);
     display: flex;
     justify-content: space-around;
     width: 140px;
@@ -242,7 +258,7 @@ button:focus {
     align-items: center;
 }
 .drp2 li:hover, .drp3 li:hover, .drp4 li:hover, .drp5 li:hover, .drp6 li:hover {
-    background-color: cornsilk;
+    background-color: rgba(255, 248, 220, 0.343);
     transition: background-color 200ms ease-in;
 }
 
@@ -267,7 +283,7 @@ button:focus {
 
 /*zaciatok spodnej listicky*/
 .spodny-div {
-    background-color: rgb(161, 143, 110);
+    background-color: var(--spodna-lista);
     width: 100%;
     height: 14%;
     top:87%;
@@ -324,7 +340,7 @@ button:focus {
     font-family: 'Lato';
     font-weight: 300;
     font-size: 18px;
-    color:burlywood;
+    color:var(--spodna-lista);
     background-color: #34638000;
 }
 
@@ -334,10 +350,11 @@ button:focus {
     color: var(--text-color);
     position:absolute;
     left: 90.7%;
-    top: 10px;
-    width: 40px;
+    top: 30px;
+    width: 50px;
     margin:0;
     height: 30px;
+    border-radius: 10px;
     
 }
 .langf {
@@ -350,6 +367,7 @@ button:focus {
     width: 40px;
     height: 1px;
     top: 8%;
+    left: 10%;
     position: absolute;
 }
 .lang-space {
@@ -367,13 +385,16 @@ button:focus {
 .lang button{
     border: 0;
     margin: 0;
-    width: 40px;
-    background-color: var(--bgclr);
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--click-button-bg);
     color: var(--text-color);
     cursor: pointer;
 }
 .lang button:hover{
     color:rgb(172, 78, 78);
+    background-color: var(--click-button-bg-ac);
     transition: background-color 200ms ease-in;
 }
 .langf a {
@@ -402,7 +423,37 @@ button:focus {
 
 /*sections*/
 .section2 {
-    background-color: yellowgreen;
+    background-color: var(--section-bg);
     width: 100%;
-    height: 60vh;
+    height: 10vh;
+    top: 0;
+    position: static;
+}
+
+.section3 {
+    background-color: var(--section-bg);
+    width: 100%;
+    height: 33vh;
+}
+.section3-a {
+    background-color: var(--section-a-bg);
+    width: 100%;
+    height: 33vh;
+}
+.sec2{
+    position: static;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background-color: black;
+
+
+}
+.sec2 h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato';
+    font-weight: 700;
+    color: black;
 }
