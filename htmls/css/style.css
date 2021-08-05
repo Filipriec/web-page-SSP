@@ -38,7 +38,7 @@ html {
     background-attachment: fixed;
 }
 
-
+/*hover text na spodok*/
 .hvr-txt p:hover{
     margin-top: 0;
     opacity: 1;
@@ -59,20 +59,21 @@ html {
 .hover-txt p{
     color: red;
 }
-.sipecka a{
+/*sipecka*/
+.sipecka a,.sipecka2 a{
     color: white;
     text-decoration: none;
     font-family: 'Lato';
     font-weight: 700;
 
 }
-.sipecka img{
+.sipecka img, .sipecka2 img{
     position: static;
     width: 35px;
     left: 50%;
     
 }
-.sipecka img:hover{
+.sipecka img:hover, .sipecka2 img:hover{
     animation: arrow-ani 0.7s ease-in-out forwards;
     animation-delay: 0.1s;
 }
@@ -91,13 +92,17 @@ html {
     }
 
 }
-.sipecka {
+.sipecka, .sipecka2 {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 83vh;
     width: 100%;
 }
+.sipecka2 {
+    height: 183vh;
+}
+/*sipecka popis click*/
 .s-click{
     background-color: rgba(97, 79, 66, 0.117);
     width: 60px;
@@ -425,7 +430,7 @@ button:focus {
 .section2 {
     background-color: var(--section-bg);
     width: 100%;
-    height: 10vh;
+    height: 0;
     top: 0;
     position: static;
 }
@@ -433,22 +438,42 @@ button:focus {
 .section3 {
     background-color: var(--section-bg);
     width: 100%;
-    height: 33vh;
+    height: 200vh;
+    background-color: black;
 }
 .section3-a {
     background-color: var(--section-a-bg);
     width: 100%;
-    height: 33vh;
+    height: 40vh;
 }
-.sec2{
-    position: static;
-    top: 0;
-    height: 0;
+.section3-b {
+    background-color: var(--section-a-bg);
     width: 100%;
-    background-color: black;
-
-
+    height: 40vh;
+    top: 40vh;
+    background-color: white;
 }
+.section3-c {
+    background-color: var(--section-a-bg);
+    width: 100%;
+    height: 40vh;
+    top: 80vh;
+}
+.section3-d {
+    background-color: var(--section-a-bg);
+    width: 100%;
+    height: 40vh;
+    top: 120vh;
+    background-color: white;
+}
+.section3-e {
+    background-color: var(--section-a-bg);
+    width: 100%;
+    height: 40vh;
+    top: 160vh;
+}
+
+
 .sec2 h1{
     display: flex;
     justify-content: center;
