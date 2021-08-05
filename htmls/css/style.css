@@ -32,7 +32,7 @@ body {
 }
 html {
     font-family: 'Lato';
-   /* scroll-behavior: smooth;*/
+    scroll-behavior: smooth;
   }
 .scroll {
     /*scroll-snap-type: y mandatory;*/
@@ -97,6 +97,7 @@ html {
 }
 .sipecka2 {
     height: 86vh;
+    position: ;
 }
 /*sipecka popis click*/
 .s-click{
