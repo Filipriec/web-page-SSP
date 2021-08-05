@@ -35,7 +35,7 @@ html {
     scroll-behavior: smooth;
   }
 .scroll {
-    /*scroll-snap-type: y mandatory;*/
+    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
 }
@@ -97,7 +97,7 @@ html {
 }
 .sipecka2 {
     height: 86vh;
-    position: ;
+    transform: translate(40%);
 }
 /*sipecka popis click*/
 .s-click{
