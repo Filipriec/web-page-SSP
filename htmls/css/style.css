@@ -41,7 +41,7 @@ html {
 
 /*backgroundimage*/
 .bgimg{
-    background-image: url("/home/filip/Documents/programming/web page SSP/wallpaper/earth-1756274_1920.jpg");
+    background-image: url("../../wallpaper/earth-1756274_1920.jpg");
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-position: center;
