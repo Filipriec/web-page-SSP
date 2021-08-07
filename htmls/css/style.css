@@ -13,7 +13,7 @@
     --section-a-bg:#373737;
     --section-b-bg:#414141;
     --sections-font:#dbdbdb;
-    --spodny-div-bg:#222222;
+    --spodny-div-bg:#222222de;
 }
 
 
@@ -96,8 +96,12 @@ html {
     width: 100%;
 }
 .sipecka2 {
-    height: 86vh;
-    transform: translate(40%);
+    height: 130vh;
+    width: 100%;
+}
+.sipecka2-posun{
+    left: 80%;
+    transform: translate(1800%);
 }
 /*sipecka popis click*/
 .s-click{
@@ -269,10 +273,13 @@ button:focus {
     pointer-events: all;
     transform: translateY(0px);
 }
-.drp2 button:focus-within + ul, .drp3 button:focus-within + ul, .drp4 button:focus-within + ul, .drp5 button:focus-within + ul, .drp6 button:focus-within + ul{
+.drp2 button:focus + ul a, .drp3 button:focus + ul a, .drp4 button:focus + ul a, .drp5 button:focus + ul a, .drp6 button:focus + ul a{
     opacity: 1;
     visibility: visible;
+    pointer-events: all;
+    cursor: pointer;
 }
+
 .drp5 {
     opacity: 0;
     pointer-events: none;
@@ -299,14 +306,14 @@ button:focus {
     transition: all 0.5s ease-in;
 }
 .hvridk{
-    width: 100%;
     height: 14%;
     top:87%;
+    width: 100%;
+    background-color: black;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
     opacity: 1;
 }
 .hvridk:hover .hvrtxt{
@@ -373,9 +380,9 @@ button:focus {
 .lang {
     color: var(--text-color);
     position:absolute;
-    left: 90.7%;
+    left: 87%;
     top: 30px;
-    width: 50px;
+    width: 150px;
     margin:0;
     height: 30px;
     border-radius: 10px;
@@ -391,8 +398,9 @@ button:focus {
     width: 40px;
     height: 1px;
     top: 8%;
-    left: 10%;
+    left: 25%;
     position: absolute;
+    transform: translate(-50%);
 }
 .lang-space {
     position: relative;
@@ -454,21 +462,21 @@ button:focus {
     position: static;
 }
 
-.section3, .section4 {
+.section3, .section4, .section5, .section6 {
     background-color: var(--section-bg);
     width: 100%;
     height: 80vh;
 
 
 }
-.section3-a, .section4-a {
+.section3-a, .section4-a, .section5-a, .section6-a {
     background-color: var(--section-a-bg);
     width: 100%;
     height: 40vh;
     top: 0;
     scroll-snap-align: start;
 }
-.section3-b, .section4-b {
+.section3-b, .section4-b, .section5-b, .section6-b {
     background-color: var(--section-b-bg);
     width: 100%;
     height: 40vh;
@@ -488,15 +496,46 @@ button:focus {
     list-style: 0;
     padding-left: 0;
 }
-.section-t-position-a, .section-t-position-b{
+.section-t-position-a, .section-t-position-b, .section-t-position-b-4{
     position: relative;
     left: 70%;
     transform: translate(-50%,70%);
     font-size: 20px;
 }
-.section-t-position-b{
+.section-t-position-b, .section-t-position-b{
     left: 45%;
 }
+.section-t-position-b-4{
+    left: 55%;
+}
+
 .section-t-position-a h1, .section-t-position-b h1{
     transform: translate(0,-3vh);
 }
+/*obrastek v sectionoch*/
+.members-icon-pos{
+    position: relative;
+    left: 36%;
+    transform: translate(-50%,100%);
+    pointer-events: all;
+    background-color: purple;
+}
+/*snaha o 2 obrazky na sebe*/
+.members-icon-pos img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img-head{
+    position: relative;
+    top: 0%;
+    left: 0%;
+}
+.img-bg{
+    position: relative;
+    opacity: 1;
+    top: 0%;
+    left: 0%;
+}
+/*vzdavam, zajtra kukam tutorial*/
