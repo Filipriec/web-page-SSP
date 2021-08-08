@@ -1,113 +1,229 @@
-@font-face {
-    src: url(fonts/Lato-Regular.ttf);
-    font-family: latorgl;
-  }
-@font-face {
-    font-family: latobld;
-    src: url(fonts/Lato-Bold.ttf);
-}
-@font-face {
-    font-family: latothn;
-    src: url(fonts/Lato-Thin.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700');
+
 
 :root{
-    --bgclr:#2b414e;
+    --bgclr:#ecf6fc00;;
+    /*--bgclr:#2b414e;*/
+    --text-color:white;
+    --borderc:rgb(247, 230, 200);
+    --menu-bg:rgba(151, 148, 148, 0.219);
+    --click-button-bg:rgba(97, 79, 66, 0.117);
+    --click-button-bg-ac:rgba(66, 54, 45, 0.562);
+    --spodna-lista:rgb(170, 125, 65);
+    --section-b-bg:#373737;
+    --section-a-bg:#414141;
+    --sections-font:#dbdbdb;
+    --sections-font-highlighted:#d8a2a2;
+    --spodny-div-bg:#222222de;
 }
 
 
 body {
     background-color: var(--bgclr);
-    font: normal 18px  latorgl;
-    height: 80vh;
+    font-family: 'Lato', sans-serif;
+    height: 0vh;
     color: aquamarine;
+    margin: 0;
+}
+.prvapage-y {
+    height: 100vh;
+    position: relative;
+    top: 0;
+    scroll-snap-align: start;
+}
+html {
+    font-family: 'Lato';
+    scroll-behavior: smooth;
+  }
+.scroll {
+    /*scroll-snap-type: y mandatory;
+    overflow-y: scroll;*/
+    height: 100vh;
+}
+
+
+/*backgroundimage*/
+.bgimg{
+    background-color: var(--section-a-bg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position:static;
+    background-size: cover;
+    background-attachment: fixed;
     
 }
+/*finitko backgroundimage*/
+
+/*sipecka*/
+.sipecka a,.sipecka2 a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Lato';
+    font-weight: 700;
+}
+.sipecka img, .sipecka2 img{
+    position: static;
+    width: 35px;
+    left: 50%;
+    
+}
+.sipecka img:hover, .sipecka2 img:hover{
+    animation: arrow-ani 0.7s ease-in-out forwards;
+    animation-delay: 0.1s;
+}
+@keyframes arrow-ani{
+    0% {
+        transform: translate(0,0);
+    }
+    20% {
+        transform: translate(0,6px);
+    }
+    65% {
+        transform: translate(0,-8px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+
+}
+.sipecka, .sipecka2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 83vh;
+    width: 100%;
+}
+.sipecka2 {
+    height: 130vh;
+    width: 100%;
+}
+.sipecka2-posun{
+    left: 80%;
+    transform: translate(1800%);
+}
+/*sipecka popis click*/
+.s-click{
+    background-color: rgba(97, 79, 66, 0.117);
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lato';
+    color: rgba(255, 255, 255, 0.473);
+    
+}
+.s-click:hover{
+    background-color: rgba(66, 54, 45, 0.562);
+    transition: background-color 200ms ease-in;
+}
+.s-click a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.473);
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.s-c-o3 {
+    width: 60px;
+    position: relative;
+    left: 50%;
+    transform: translate(-90px);
+    top: -3vh;
+}
+
 /*scroll bar*/
 
-/* width */
-::-webkit-scrollbar {
-    width: 15px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-  /*end of scroll bar*/
+        /* width */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        
+         /*Track*/
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        
+         /*Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+        }
+        
+         /*Handle on hover*/
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+/*end of scroll bar*/
 
 
 /* start of dropdown menu */
+
 button:hover {
     background-color:#346380;
     transition: background-color 200ms ease-in;
 }
 button:focus {
-    background-color:rgb(151, 148, 148);
+    background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
 }
-.dropdown{
-    height: 7vh;
-    background-color: var(--bgclr);
-    display: flex;
-    justify-content: space-around;
-    width: 1000px;
-    align-items:center;
-    margin:auto;
-
+.menu-btn{
+    background-color: tomato;
 }
 .dropdown-position{
-    width: 1000px;
-    height: 10vh;
+    width: 0vh;
+    height: 100%;
     position: absolute;
-    top: 10%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-
+    top: 0;
+    left: 87%;
 
 }
-.dropdown button {
-    font-family: latobld;
-    color: burlywood;
+.dropdown{
+    height: 50vh;
+    background-color: var(--bgclr);
+
+    margin:auto;
+}/*
+.dropdown2{
+    display: flex;
+    justify-content: column;
+}*/
+.dropdown button{
+    font-family: 'Lato';
+    font-weight: 700;
+    color: var(--text-color);
     font-size: 22px;
     height: 45px;
     width: 140px;
     padding: 15px 35px;
-    margin: 0;
+    margin-top: 1.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: var(--bgclr);
-    border: 2px solid beige;
+    border: 2px solid var(--borderc);
     cursor: pointer;
     text-decoration: none;
     border-radius: 1px;
 }
-
 .dropdown button:hover {
-    background-color:#346380;
+    background-color:#34638042;
     transition: background-color 200ms ease-in;
 }
 .dropdown button:focus {
-    background-color:rgb(151, 148, 148);
+    background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
 }
-.drp2, .drp3, .drp4, .drp5, .drp6 {
+.drp2, .drp3, .drp4, .drp5, .drp6, .drp7 {
     position: relative;
+    left: -50%;
+    top: 20%;
+    transform: translate(-50%,-50%);
 }
 .drp2 ul, .drp3 ul, .drp4 ul, .drp5 ul, .drp6 ul {
     position: absolute;
-    background-color: rgb(151, 148, 148);
+    background-color: var(--menu-bg);
     display: flex;
     justify-content: space-around;
     width: 140px;
@@ -116,15 +232,17 @@ button:focus {
     flex-direction: column;
     align-items:center;
     padding-left: 0;
-    margin-top: 5px;
     opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
+    pointer-events:none;
+    transform: translateX(10px);
     transition: all 0.4s ease;
     border-radius: 3px;
+    left: -145px;
+    top: -16px;
 }
 .drp2 ul{
     height: 250px;
+    opacity: 0;
 }
 .drp3 ul{
     height: 100px;
@@ -137,7 +255,7 @@ button:focus {
     padding-right: 20px;
 }
 .drp5 a{
-    color: burlywood;
+    color: var(--text-color);
 }
 .drp2 a, .drp3 a{
     padding-left: 40px;
@@ -151,33 +269,61 @@ button:focus {
     align-items: center;
 }
 .drp2 li:hover, .drp3 li:hover, .drp4 li:hover, .drp5 li:hover, .drp6 li:hover {
-    background-color: cornsilk;
+    background-color: rgba(255, 248, 220, 0.343);
     transition: background-color 200ms ease-in;
+    pointer-events: all;
 }
-
 .drp2 button:focus + ul, .drp3 button:focus + ul, .drp4 button:focus + ul, .drp5 button:focus + ul, .drp6 button:focus + ul{
     opacity: 1;
+    transform: translateX(0px);
     pointer-events: all;
-    transform: translateY(0px);
 }
-.drp2 button:focus-within + ul, .drp3 button:focus-within + ul, .drp4 button:focus-within + ul, .drp5 button:focus-within + ul, .drp6 button:focus-within + ul{
-    opacity: 1;
-    visibility: visible;
+.drp5 {
+    opacity: 0;
+    pointer-events: none;
+}
+.dropdown a{
+    text-decoration: none;
+    color: var(--text-color);
 }
 /* end of dropdown menu */
 
 /*zaciatok spodnej listicky*/
 .spodny-div {
-    background-color: rgb(161, 143, 110);
+    background-color: var(--spodny-div-bg);
     width: 100%;
-    height: 15%;
-    top:85%;
+    height: 14%;
+    top:87%;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     position: fixed;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.5s ease-in;
 }
+.hvridk{
+    height: 14%;
+    top:87%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+.hvridk:hover .hvrtxt{
+    opacity: 0;
+    transition: all 0.2s ease-in;
+}
+.hvridk:hover .spodny-div{
+    margin-top: 0;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 .patreon {
     width: 25px;
     height: 25px;
@@ -186,30 +332,58 @@ button:focus {
     left: 85%;
     position: fixed;
 }
-.thanks{
-    color: black;
-    font-size: 11px;
-    left: 10%;
-    top: 65%;
-    position: absolute;
-}
 .final-word {
-    color: black;
+    color: var(--sections-font);
+    font-family: 'Lato';
+    font-weight: 400;
     left: 10%;
-    top: 10%;
+    top: 0%;
     position: absolute;
-    font-size: 16px;
+    font-size: 18px;
     word-spacing: 1px;
 }
+.thanks{
+    color: var(--sections-font);
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 13px;
+    left: 10%;
+    top: 60%;
+    position: absolute;
+}
+.hvrtxt{
+    top: 91%;
+    width: 100%;
+    height: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 18px;
+    color:var(--spodna-lista);
+    background-color: #34638000;
+    opacity: 1;
+}
+.hvrtxt p{
+    transform: translate(-7px);
+}
+
+
+
+/*spodna listicka done*/
 /*lang changer */
 .lang {
-    color: black;
-    position:relative;
-    left: 90.7%;
-    top: 10px;
-    width: 80px;
+    color: var(--text-color);
+    position:absolute;
+    left: 87%;
+    top: 30px;
+    width: 150px;
     margin:0;
     height: 30px;
+    border-radius: 10px;
     
 }
 .langf {
@@ -219,10 +393,12 @@ button:focus {
 }
 .lang-line-x {
     background-color: crimson;
-    width: 80px;
+    width: 40px;
     height: 1px;
     top: 8%;
+    left: 25%;
     position: absolute;
+    transform: translate(-50%);
 }
 .lang-space {
     position: relative;
@@ -239,48 +415,149 @@ button:focus {
 .lang button{
     border: 0;
     margin: 0;
-    width: 40px;
-    background-color: var(--bgclr);
-    color: blanchedalmond;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--click-button-bg);
+    color: var(--text-color);
     cursor: pointer;
 }
 .lang button:hover{
     color:rgb(172, 78, 78);
+    background-color: var(--click-button-bg-ac);
     transition: background-color 200ms ease-in;
 }
 .langf a {
     text-decoration: none;
-}
-/*sci hub page body*/
-.text {
-    width: 100%;
-    color: tomato;
-    left: 10px;
-    height: 500px;
-    position:static;
-
+    font-family: 'Lato';
+    font-weight: 300;
+    color: var(--text-color);
+    left: 0%;
     
 }
-.text a{
-    text-decoration: none;
-    pointer-events: visible;
-    color: rgb(161, 42, 21);
+/*koniec jazyka*/
+
+
+
+
+/*sections*/
+.section2 {
+    background-color: var(--section-bg);
+    width: 100%;
+    height: 0;
+    top: 0;
+    position: static;
 }
 
-.odsadenicko {
-    left: 150px;
+.section3, .section4, .section5, .section6 {
+    background-color: var(--section-bg);
     width: 100%;
-    position: absolute;
-    top: 150px;
+    height: 80vh;
+
 
 }
-.odsadenicko2 {
-    left: 180px;
+.section3-a, .section4-a, .section5-a, .section6-a {
+    background-color: var(--section-a-bg);
     width: 100%;
-    position: absolute;
-    top: 210px;
+    height: 40vh;
+    top: 0;
+    scroll-snap-align: start;
 }
-.space {
+.section3-b, .section4-b, .section5-b, .section6-b {
+    background-color: var(--section-b-bg);
+    width: 100%;
+    height: 40vh;
+    top: 40vh;
+    scroll-snap-align: start;
+}
+/*end of defining sections, time for stuff in the sections*/
+/*start of inside of the sections*/
+.sections-text-a, .sections-text-b{
+    color: var(--sections-font);
+    display: flex;
+    align-items: center;
+    line-height: 50%;
+    font-weight: 300;
+    height: 40vh;
+}
+.sections-text-a h1, .sections-text-b h1{
+    color: var(--sections-font);
+    display: flex;
+    align-items: center;
+    line-height: 50%;
+    font-weight: 300;
+}
+
+.ulls-a, .ulls-b{
+    list-style: 0;
+    padding-left: 0;
+}
+.section-t-position-a, .section-t-position-b, .section-t-position-b-4{
+    position: relative;
+    left: 70%;
+    top: 0;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+.section-t-position-b, .section-t-position-b{
+    left: 45%;
+}
+.section-t-position-b-4{
+    left: 55%;
+}
+
+.section-t-position-a h1, .section-t-position-b h1{
+    transform: translate(0,-3vh);
+}
+/*obrastek v sectionoch*/
+.members-icon-pos{
+    position: relative;
+    left: 50%;
+    width: 0;
+    height: 15vh;
+    transform: translate(-25vh,-50%);
+    pointer-events: all;
+    border-radius: 50%;
+}
+/*.members-icon-pos{
+    
+}*/
+.twoimgcentering-test1, .twoimgcentering-test2{
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 100px;
     height: 100px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+.twoimgcentering-test2{
+    opacity: 0;
+    background-color: #007acc;
+}
+.members-icon-pos:hover .twoimgcentering-test2{
+    opacity: 1;
+    transition: opacity 200ms ease-in;
+}
 
+/*body text*/
+.text, .nadpis{
+    position: absolute;
+    width: 600px;
+    height: 15vh;
+    top: 17%;
+    left: 20%;
+}
+.odsadenicko, .odsadenicko2, .odsadenicko a, .odsadenicko2 a{
+    color: var(--sections-font);
+    font-family: 'Lato';
+    font-weight: 400;
+    position: relative;
+    text-decoration: var(--sections-font-highlighted);
+}
+.odsadenicko a, .odsadenicko2 a{
+    font-weight: 400;
+}
+.odsadenicko2{
+    font-weight: 300;
 }
