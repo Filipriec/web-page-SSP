@@ -180,33 +180,34 @@ button:focus {
     width: 18%;
     top: 0%;
     height: 100vh;
-    background-color: mediumorchid;
+    background-color: rgba(207, 201, 165, 0.48);
     transform: translate(-15px);
     /*height: 100vh;*/ 
 }
 .menu-btn{
-    position: fixed;
+    position: sticky;
+    top: 0;
     height: 100vh;
-    transform: translate(-15px);
     left: 82%;
-    width: 18%;
+    width: 100%;
 }
 .pos-trojpalicka{
-    position: absolute;
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
     height: 100vh;
-    left: 100%;
+    left: 0;
 }
 .pozadie-trojpalicky{
-    position:absolute;
+    position:relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 82%;
-    width: 18%;
+    left: 0;
+    width: 100%;
     top: 0;
     margin:0;
     height: 100vh;
@@ -229,7 +230,9 @@ button:focus {
     cursor: pointer;
     text-decoration: none;
     border-radius: 1px;
-    transform: translateX(-15vh);
+    transform: translateX(0);
+    position: absolute;
+    left: 25%;
 }
 .trojpalicka:hover{
     background-color:var(--li-hover);
@@ -256,7 +259,7 @@ button:focus {
     transition: opacity 200ms ease-in;
     pointer-events: all;
 }*/
-.trojpalicka:focus-within + .pozadie-trojpalicky +.lang +.dropdown-position, 
+/*.trojpalicka:focus-within + .pozadie-trojpalicky +.lang +.dropdown-position, 
 .trojpalicka:focus-within + .pozadie-trojpalicky +.lang,
 .trojpalicka:focus-within + .pozadie-trojpalicky
 {
@@ -264,20 +267,20 @@ button:focus {
     pointer-events: all;
     transform: translate(0px, 0px);
     transition: opacity 200ms ease-in;
-}
+}*/
 .trojpalicka:focus-within{
     opacity: 0;
     transition: opacity 200ms ease-in;
 }
 
 .dropdown-position{
-    width: 0vh;
-    height: 100%;
+    width: 100%;
+    height: 15vh;
     position: absolute;
-    top: 0;
-    left: 91%;
-    opacity: 1;
+    top: 10%;
+    left: 0;
     pointer-events: none;
+    opacity: 0;
 }
 .dropdown{
     height: 50vh;
@@ -317,9 +320,9 @@ button:focus {
 }
 .drp2, .drp3, .drp4, .drp5, .drp6, .drp7 {
     position: relative;
-    left: -50%;
+    left: 50%;
     top: 20%;
-    transform: translate(-50%,-50%);
+    transform: translate(0,-50%);
 }
 .drp2 ul, .drp3 ul, .drp4 ul, .drp5 ul, .drp6 ul {
     position: absolute;
@@ -479,15 +482,15 @@ button:focus {
 .lang {
     color: var(--text-color);
     position:absolute;
-    left: 91%;
+    left: 50%;
     top: 30px;
     width: 150px;
     margin:0;
     height: 30px;
     border-radius: 10px;
     opacity: 1;
-    pointer-events: none;
-    
+    pointer-events: none;   
+    transform: translate(-50%);
 }
 .langf {
     display: flex;
