@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,700');
+
+
+:root{
+    --bgclr:#ecf6fc00;;
+    /*--bgclr:#2b414e;*/
+    --text-color:white;
+    --borderc:rgb(247, 230, 200);
+    --menu-bg:rgba(151, 148, 148, 0.219);
+    --click-button-bg:rgba(97, 79, 66, 0.117);
+    --click-button-bg-ac:rgba(66, 54, 45, 0.562);
+    --spodna-lista:rgb(170, 125, 65);
+    --section-a-bg:#373737;
+    --section-b-bg:#414141;
+    --sections-font:#2b2a2a;
+    --spodny-div-bg:#777676de;
+}
+
+
+body {
+    background-color: var(--bgclr);
+    font-family: 'Lato', sans-serif;
+    height: 0vh;
+    color: aquamarine;
+    margin: 0;
+    background-color: var(--section-b-bg);
+}
+html {
+    font-family: 'Lato';
+    scroll-behavior: smooth;
+  }
+.scroll {
+    height: 100vh;
+}
+/*scroll bar*/
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        
+         /*Track*/
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        
+         /*Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+        }
+        
+         /*Handle on hover*/
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+/*end of scroll bar*/
+.page-height{
+    height: 300vh;
+    width: 100%;
+}
+.bgimg{
+    background-image: url("../wallpaper/earth-1756274_1920.jpg");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position:static;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.menu-position{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+}
+.menu-bg{
+    background-color: rgb(216, 204, 186);
+    left: 78%;
+    width: 22%;
+    height: 100vh;
+    position: relative;
+}
