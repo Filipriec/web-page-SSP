@@ -31,6 +31,7 @@ body {
     position: relative;
     top: 0;
     scroll-snap-align: start;
+    pointer-events: none;
 }
 html {
     font-family: 'Lato';
@@ -102,10 +103,10 @@ html {
 }
 .sipecka2 {
     height: 130vh;
+    justify-content: flex-start;
 }
 .sipecka2-posun{
-    left: 80%;
-    transform: translate(1800%);
+    transform: translate(20vh);
 }
 /*sipecka popis click*/
 .s-click{
@@ -139,6 +140,7 @@ html {
     top: -3vh;
 }
 
+
 /*scroll bar*/
 
         /* width */
@@ -161,7 +163,30 @@ html {
             background: #555; 
         }
 /*end of scroll bar*/
+.activator, .menu-btn:focus-within>.trojpalicka{
+    transition: opacity 220ms ease-in;
+    opacity: 0;
+    pointer-events: none;
+}
+.menu-btn:focus-within>.activator, .menu-btn:focus-within>.pozadie-trojpalicky{
 
+    transition: opacity 220ms ease-in;
+    opacity: 1;
+}
+.menu-btn:focus-within>.activator{
+    pointer-events: all;
+}
+.menu-btn:focus-within>.activator
+.drp2:focus + .ul2/*,
+.drp2:focus + .odkazy-ul2,
+.drp3:focus + .odkazy-ul3,
+.drp4:focus + .odkazy-ul4,
+.drp5:focus + .odkazy-ul5*/{
+    opacity: 1;
+    transform: translate(0,0);
+    transition: transform 200ms ease-in;
+    pointer-events: all;
+}
 
 /* default buttons */
 
@@ -175,14 +200,12 @@ button:focus {
 }
 /* start of dropdown menu */
 .stck-menu{
-    position: fixed;
+    position: absolute;
     left: 82%;
     width: 18%;
     top: 0%;
-    height: 100vh;
-    background-color: rgba(207, 201, 165, 0.48);
-    /*transform: translate(-15px);*/
-    /*height: 100vh;*/ 
+    height: 520vh;
+    
 }
 .menu-btn{
     position: sticky;
@@ -191,8 +214,8 @@ button:focus {
     left: 82%;
     width: 100%;
 }
-.pos-trojpalicka{
-    position: static;
+.activator{
+    position: absolute;
     top: 0;
     display: flex;
     align-items: center;
@@ -200,19 +223,20 @@ button:focus {
     width: 100%;
     height: 100vh;
     left: 0;
+    opacity: 0;
 }
 .pozadie-trojpalicky{
-    position:relative;
+    position:absolute;
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 0;
+    height: 100vh;
     left: 0;
     width: 100%;
-    top: 0;
-    margin:0;
-    height: 100vh;
-    opacity: 0.5;
     pointer-events: none;
+    background-color: rgba(207, 201, 165, 0.48);
+    opacity: 0;
 }
 .trojpalicka{
     font-family: 'Lato';
@@ -233,6 +257,7 @@ button:focus {
     transform: translateX(0);
     position: absolute;
     left: 25%;
+    top: 50%;
 }
 .trojpalicka:hover{
     background-color:var(--li-hover);
@@ -242,7 +267,7 @@ button:focus {
     opacity: 0;
     transition: opacity 200ms ease-in;
     pointer-events: none;
-}
+}/*
 .trojpalicka:hover + .pozadie-trojpalicky{
     background-color: green;
     transition: background-color 200ms ease-in;
@@ -252,13 +277,13 @@ button:focus {
     background-color: plum;
     transition: background-color 200ms ease-in;
     pointer-events: none;
-}
-.trojpalicka:focus + .pozadie-trojpalicky + .lang,
-.trojpalicka:focus + .pozadie-trojpalicky + .lang + .dropdown-position{
+}*//*
+.trojpalicka:focus + .lang,
+.trojpalicka:focus + .lang + .dropdown-position{
     opacity: 1;
     transition: opacity 200ms ease-in;
     pointer-events: all;
-}
+}*/
 /*.trojpalicka:focus-within + .pozadie-trojpalicky +.lang +.dropdown-position, 
 .trojpalicka:focus-within + .pozadie-trojpalicky +.lang,
 .trojpalicka:focus-within + .pozadie-trojpalicky
@@ -268,10 +293,7 @@ button:focus {
     transform: translate(0px, 0px);
     transition: opacity 200ms ease-in;
 }*/
-.trojpalicka:focus-within{
-    opacity: 0;
-    transition: opacity 200ms ease-in;
-}
+
 
 .dropdown-position{
     width: 100%;
@@ -279,19 +301,15 @@ button:focus {
     position: absolute;
     top: 10%;
     left: 0;
-    pointer-events: none;
-    opacity: 0;
+    pointer-events: all;
+    opacity: 1;
 }
 .dropdown{
-    height: 50vh;
+    height: 35vh;
     background-color: var(--bgclr);
-
     margin:auto;
-}/*
-.dropdown2{
-    display: flex;
-    justify-content: column;
-}*/
+    pointer-events: all;
+}
 .dropdown button{
     font-family: 'Lato';
     font-weight: 700;
@@ -310,21 +328,21 @@ button:focus {
     text-decoration: none;
     border-radius: 1px;
 }
-.dropdown button:hover {
+button:hover {
     background-color:#34638042;
     transition: background-color 200ms ease-in;
 }
-.dropdown button:focus {
+button:focus {
     background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
-}
+}/*
 .drp2, .drp3, .drp4, .drp5, .drp6, .drp7 {
     position: relative;
     left: 50%;
     top: 20%;
     transform: translate(0,-50%);
-}
-.drp2 ul, .drp3 ul, .drp4 ul, .drp5 ul, .drp6 ul {
+}*/
+.ul2,.ul3,.ul4,.ul5{
     position: absolute;
     background-color: var(--menu-bg);
     display: flex;
@@ -343,47 +361,43 @@ button:focus {
     left: -145px;
     top: -16px;
 }
-.drp2 ul{
+.ul2{
     height: 250px;
     opacity: 0;
 }
-.drp3 ul{
+.ul3{
     height: 100px;
 }
-.drp2 a, .drp3 a, .drp4 a, .drp5 a, .drp6 a {
+a {
     color: black;
     text-decoration: none;
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
 }
-.drp5 a{
+.ul5 a{
     color: var(--text-color);
 }
-.drp2 a, .drp3 a{
+.ul2 a, .ul3 a{
     padding-left: 40px;
     padding-right: 40px;
 }
-.drp2 li, .drp3 li, .drp4 li, .drp5 li, .drp6 li {
+.ul2 li, .ul3 li, .ul4 li, .ul5 li, .ul6 li {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.drp2 li:hover, .drp3 li:hover, .drp4 li:hover, .drp5 li:hover, .drp6 li:hover {
+.ul2 li:hover, .ul3 li:hover, .ul4 li:hover, .ul5 li:hover{
     background-color: var(--li-hover);
     transition: background-color 200ms ease-in;
     pointer-events: all;
 }
-.drp2 button:focus + ul, .drp3 button:focus + ul, .drp4 button:focus + ul, .drp5 button:focus + ul, .drp6 button:focus + ul{
+.drp2:focus + ul, .drp3:focus + ul, .drp4:focus + ul, .drp5:focus + ul, .drp6:focus + ul{
     opacity: 1;
     transform: translateX(0px);
     pointer-events: all;
-}
-.drp5 {
-    opacity: 0;
-    pointer-events: none;
 }
 .dropdown a{
     text-decoration: none;
@@ -392,17 +406,6 @@ button:focus {
 /* end of dropdown menu */
 
 /*zaciatok spodnej listicky*/
-.hvridk{
-    height: 14%;
-    top:87%;
-    width: 100%;
-    background-color: black;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 1;
-}
 .spodny-div {
     background-color: var(--spodny-div-bg);
     width: 100%;
@@ -417,7 +420,17 @@ button:focus {
     transform: translateY(60px);
     transition: all 0.5s ease-in;
 }
-
+.hvridk{
+    height: 14%;
+    top:87%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
 .hvridk:hover .hvrtxt{
     opacity: 0;
     transition: all 0.2s ease-in;
@@ -489,10 +502,10 @@ button:focus {
     height: 30px;
     border-radius: 10px;
     opacity: 1;
-    pointer-events: none;   
+    pointer-events: all;   
     transform: translate(-50%);
 }
-.langf {
+.langf, .langf button{
     display: flex;
     justify-content: space-around;
     align-items:center;
