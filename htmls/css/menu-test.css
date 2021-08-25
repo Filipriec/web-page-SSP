@@ -62,6 +62,8 @@ html {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    height: 83vh;
+    pointer-events: all;
 }
 .sipecka a,.sipecka2 a, .sipecka3 a{
     color: white;
@@ -109,6 +111,13 @@ html {
     transform: translate(20vh);
 }
 /*sipecka popis click*/
+.s-c-o3 {
+    width: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-90px,-23px);
+    top: 83vh;/*-4vh*/
+}
 .s-click{
     background-color: rgba(97, 79, 66, 0.117);
     width: 60px;
@@ -131,13 +140,6 @@ html {
     padding:5px;
     padding-left: 10px;
     padding-right: 10px;
-}
-.s-c-o3 {
-    width: 60px;
-    position: relative;
-    left: 50%;
-    transform: translate(-90px);
-    top: -3vh;
 }
 
 

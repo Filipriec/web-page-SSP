@@ -10,8 +10,11 @@
     --click-button-bg:rgba(97, 79, 66, 0.117);
     --click-button-bg-ac:rgba(66, 54, 45, 0.562);
     --spodna-lista:rgb(170, 125, 65);
+    --section-a-bg:#efefef;
+    --section-b-bg:#f9f9f9;
+    /* before pupushka: 
     --section-a-bg:#d1d0d0;
-    --section-b-bg:#c5c4c4;
+    --section-b-bg:#c5c4c4;*/
     --sections-font:#2b2a2a;
     --spodny-div-bg:#777676de;
 }

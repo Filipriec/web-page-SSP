@@ -127,10 +127,11 @@ html {
 }
 .s-c-o3 {
     width: 60px;
-    position: relative;
+    position: absolute;
     left: 50%;
-    transform: translate(-90px);
-    top: -3vh;
+    transform: translate(-90px,-3vh);
+    top: 83vh;
+    /*top: -3vh;*/
 }
 
 /*scroll bar*/
