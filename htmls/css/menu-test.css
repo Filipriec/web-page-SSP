@@ -165,31 +165,44 @@ html {
             background: #555; 
         }
 /*end of scroll bar*/
-.activator, .menu-btn:focus-within>.trojpalicka{
+/*
+ .menu-btn:focus-within>.trojpalicka{
     transition: opacity 220ms ease-in;
     opacity: 0;
-    pointer-events: none;
 }
-.menu-btn:focus-within>.activator, .menu-btn:focus-within>.pozadie-trojpalicky{
-
+.trojpalicka:focus{
+    transition: opacity 220ms ease-in;
+    opacity: 0;
+}
+.menu-btn:focus-within>.lang{
     transition: opacity 220ms ease-in;
     opacity: 1;
 }
-.menu-btn:focus-within>.activator{
-    pointer-events: all;
-}
-.menu-btn:focus-within>.activator
-.drp2:focus + .ul2/*,
-.drp2:focus + .odkazy-ul2,
-.drp3:focus + .odkazy-ul3,
-.drp4:focus + .odkazy-ul4,
-.drp5:focus + .odkazy-ul5*/{
+.menu-btn:focus-within>.pozadie-trojpalicky{
+
+    transition: opacity 220ms ease-in;
     opacity: 1;
-    transform: translate(0,0);
-    transition: transform 200ms ease-in;
+}/*
+.menu-btn:focus-within>.lang, 
+.menu-btn:focus-within>.dropdown-position{
     pointer-events: all;
+}*/
+
+.menu-btn:focus-within>.trojpalicka{
+    opacity: 0;
+    transition: opacity 220ms ease-in;
 }
 
+.menu-btn:focus-within>.pozadie-trojpalicky,
+.menu-btn:focus-within>.dropdown-position,
+.menu-btn:focus-within>.lang{
+    transition: opacity 220ms ease-in;
+    opacity: 1;
+}
+.menu-btn:focus-within>.dropdown-position,
+.menu-btn:focus-within>.lang{
+    pointer-events: all;
+}
 /* default buttons */
 
 button:hover {
@@ -216,17 +229,6 @@ button:focus {
     left: 82%;
     width: 100%;
 }
-.activator{
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    height: 100vh;
-    left: 0;
-    opacity: 0;
-}
 .pozadie-trojpalicky{
     position:absolute;
     display: flex;
@@ -237,7 +239,7 @@ button:focus {
     left: 0;
     width: 100%;
     pointer-events: none;
-    background-color: rgba(207, 201, 165, 0.48);
+    background-color: rgba(207, 201, 165, 0.24);
     opacity: 0;
 }
 .trojpalicka{
@@ -256,7 +258,6 @@ button:focus {
     cursor: pointer;
     text-decoration: none;
     border-radius: 1px;
-    transform: translateX(0);
     position: absolute;
     left: 25%;
     top: 50%;
@@ -269,43 +270,18 @@ button:focus {
     opacity: 0;
     transition: opacity 200ms ease-in;
     pointer-events: none;
-}/*
-.trojpalicka:hover + .pozadie-trojpalicky{
-    background-color: green;
-    transition: background-color 200ms ease-in;
-    pointer-events: none;
 }
-.trojpalicka:focus + .pozadie-trojpalicky{
-    background-color: plum;
-    transition: background-color 200ms ease-in;
-    pointer-events: none;
-}*//*
-.trojpalicka:focus + .lang,
-.trojpalicka:focus + .lang + .dropdown-position{
-    opacity: 1;
-    transition: opacity 200ms ease-in;
-    pointer-events: all;
-}*/
-/*.trojpalicka:focus-within + .pozadie-trojpalicky +.lang +.dropdown-position, 
-.trojpalicka:focus-within + .pozadie-trojpalicky +.lang,
-.trojpalicka:focus-within + .pozadie-trojpalicky
-{
-    opacity: 1;
-    pointer-events: all;
-    transform: translate(0px, 0px);
-    transition: opacity 200ms ease-in;
-}*/
-
 
 .dropdown-position{
     width: 100%;
     height: 40vh;
     position: absolute;
-    top: 10%;
+    top: 0;
     left: 0;
     pointer-events: none;
-    opacity: 1;
+    opacity: 0;
     margin: auto;
+    transform: translate(0,10vh);
 }
 .dropdown-position button{
     font-family: 'Lato';
@@ -332,8 +308,8 @@ button:hover {
 button:focus {
     background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
-}/*
-.drp2, .drp3, .drp4, .drp5, .drp6, .drp7 {
+}
+/*.drp2, .drp3, .drp4, .drp5, .drp6 {
     position: relative;
     left: 50%;
     top: 20%;
@@ -370,7 +346,7 @@ button:focus {
     height: 100px;
 }
 a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     padding: 10px;
     padding-left: 20px;
@@ -502,9 +478,10 @@ a {
     margin:0;
     height: 30px;
     border-radius: 10px;
-    opacity: 1;
-    pointer-events: all;   
-    transform: translate(-50%);
+    opacity: 0;
+    pointer-events: none;   
+    transform: translate(-50%,1vh);
+    
 }
 .langf, .langf button{
     display: flex;
