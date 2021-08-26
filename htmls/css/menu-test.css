@@ -299,20 +299,15 @@ button:focus {
 
 .dropdown-position{
     width: 100%;
-    height: 15vh;
+    height: 40vh;
     position: absolute;
     top: 10%;
     left: 0;
-    pointer-events: all;
+    pointer-events: none;
     opacity: 1;
+    margin: auto;
 }
-.dropdown{
-    height: 35vh;
-    background-color: var(--bgclr);
-    margin:auto;
-    pointer-events: all;
-}
-.dropdown button{
+.dropdown-position button{
     font-family: 'Lato';
     font-weight: 700;
     color: var(--text-color);
@@ -344,6 +339,10 @@ button:focus {
     top: 20%;
     transform: translate(0,-50%);
 }*/
+.drp6 a{
+    text-decoration: none;
+    color: var(--text-color);
+}
 .ul2,.ul3,.ul4,.ul5{
     position: absolute;
     background-color: var(--menu-bg);
