@@ -32,11 +32,11 @@ body {
 }
 html {
     font-family: 'Lato';
-    scroll-behavior: smooth;
   }
 .scroll {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    scroll-behavior: smooth;
     height: 100vh;
 }
 
@@ -60,11 +60,13 @@ html {
     text-decoration: none;
     font-family: 'Lato';
     font-weight: 700;
+    pointer-events: none;
 }
 .sipecka img, .sipecka2 img{
     position: static;
     width: 35px;
     left: 50%;
+    pointer-events: all;
     
 }
 .sipecka img:hover, .sipecka2 img:hover{
