@@ -63,18 +63,20 @@ html {
     left: 50%;
     transform: translate(-50%);
     height: 83vh;
-    pointer-events: all;
+    pointer-events: none;
 }
 .sipecka a,.sipecka2 a, .sipecka3 a{
     color: white;
     text-decoration: none;
     font-family: 'Lato';
     font-weight: 700;
+    pointer-events: none;
 }
 .sipecka img, .sipecka2 img, .sipecka3 img{
     position: static;
     width: 35px;
     left: 50%;
+    pointer-events: all;
     
 }
 .sipecka img:hover, .sipecka2 img:hover, .sipecka3 img:hover{
@@ -115,7 +117,7 @@ html {
     width: 60px;
     position: absolute;
     left: 50%;
-    transform: translate(-90px,-23px);
+    transform: translate(-90px,-40px);
     top: 83vh;/*-4vh*/
 }
 .s-click{
@@ -165,28 +167,7 @@ html {
             background: #555; 
         }
 /*end of scroll bar*/
-/*
- .menu-btn:focus-within>.trojpalicka{
-    transition: opacity 220ms ease-in;
-    opacity: 0;
-}
-.trojpalicka:focus{
-    transition: opacity 220ms ease-in;
-    opacity: 0;
-}
-.menu-btn:focus-within>.lang{
-    transition: opacity 220ms ease-in;
-    opacity: 1;
-}
-.menu-btn:focus-within>.pozadie-trojpalicky{
 
-    transition: opacity 220ms ease-in;
-    opacity: 1;
-}/*
-.menu-btn:focus-within>.lang, 
-.menu-btn:focus-within>.dropdown-position{
-    pointer-events: all;
-}*/
 
 .menu-btn:focus-within>.trojpalicka{
     opacity: 0;
@@ -216,17 +197,20 @@ button:focus {
 /* start of dropdown menu */
 .stck-menu{
     position: absolute;
-    left: 82%;
-    width: 18%;
+    left: 83.5%;
+    width: 16.5%;
     top: 0%;
     height: 520vh;
-    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    z-index: 1;   
 }
 .menu-btn{
     position: sticky;
     top: 0;
     height: 100vh;
-    left: 82%;
+    left: 0;
     width: 100%;
 }
 .pozadie-trojpalicky{
@@ -239,8 +223,9 @@ button:focus {
     left: 0;
     width: 100%;
     pointer-events: none;
-    background-color: rgba(207, 201, 165, 0.24);
+    background-color: rgb(48, 48, 48);
     opacity: 0;
+    z-index: -1;
 }
 .trojpalicka{
     font-family: 'Lato';
@@ -309,17 +294,17 @@ button:focus {
     background-color:var(--menu-bg);
     transition: background-color 200ms ease-in;
 }
-/*.drp2, .drp3, .drp4, .drp5, .drp6 {
+.drp1, .drp2, .drp3, .drp4, .drp5, .drp6 {
     position: relative;
     left: 50%;
     top: 20%;
     transform: translate(0,-50%);
-}*/
+}
 .drp6 a{
     text-decoration: none;
     color: var(--text-color);
 }
-.ul2,.ul3,.ul4,.ul5{
+.ul2, .ul3, .ul4, .ul5{
     position: absolute;
     background-color: var(--menu-bg);
     display: flex;
@@ -332,18 +317,29 @@ button:focus {
     padding-left: 0;
     opacity: 0;
     pointer-events:none;
-    transform: translateX(10px);
     transition: all 0.4s ease;
     border-radius: 3px;
-    left: -145px;
-    top: -16px;
+    left: 6%;
+    top: 0;
 }
 .ul2{
     height: 250px;
     opacity: 0;
+    top: 90px;
+    transform: translate(10px,1.4vh);
 }
 .ul3{
     height: 100px;
+    top: 135px;
+    transform: translate(10px,3.9vh);
+}
+.ul4{
+    top: 180px;
+    transform: translate(10px,4.4vh);
+}
+.ul5{
+    top: 225px;
+    transform: translate(10px,5.9vh);
 }
 a {
     color: var(--text-color);
@@ -373,8 +369,17 @@ a {
 }
 .drp2:focus + ul, .drp3:focus + ul, .drp4:focus + ul, .drp5:focus + ul, .drp6:focus + ul{
     opacity: 1;
-    transform: translateX(0px);
+    transform: translate(0,2.4vh);
     pointer-events: all;
+}
+.drp3:focus + ul{
+    transform: translate(0,3.9vh);
+}
+.drp4:focus + ul{
+    transform: translate(0,5.4vh);
+}
+.drp5:focus + ul{
+    transform: translate(0,6.9vh);
 }
 .dropdown a{
     text-decoration: none;
@@ -480,7 +485,7 @@ a {
     border-radius: 10px;
     opacity: 0;
     pointer-events: none;   
-    transform: translate(-50%,1vh);
+    transform: translate(0,1vh);
     
 }
 .langf, .langf button{
