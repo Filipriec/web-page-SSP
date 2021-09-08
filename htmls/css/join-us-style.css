@@ -360,6 +360,9 @@ button:focus {
     top: 20%;
     transform: translate(0,-50%);
 }
+.drpX{
+    opacity: 0;
+}
 .drp6 a{
     text-decoration: none;
     color: var(--text-color);
@@ -383,7 +386,7 @@ button:focus {
     top: 0;
 }
 .ul2{
-    height: 200px;
+    height: 250px;
     opacity: 0;
     top: 90px;
     transform: translate(10px,8.4vh);
@@ -483,9 +486,6 @@ a {
 .soc-media-positioning {
     left: 85%;
     position: fixed;
-}
-.soc-media-positioning a{
-    padding: 0;
 }
 .final-word {
     color: var(--sections-font);
