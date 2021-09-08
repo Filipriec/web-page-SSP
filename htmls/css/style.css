@@ -55,14 +55,14 @@ html {
 /*finitko backgroundimage*/
 
 /*sipecka*/
-.sipecka a,.sipecka2 a{
+.sipecka a,.sipecka2 a, .sipecka3 a{
     color: white;
     text-decoration: none;
     font-family: 'Lato';
     font-weight: 700;
     pointer-events: none;
 }
-.sipecka img, .sipecka2 img{
+.sipecka img, .sipecka2 img, .sipecka3 img{
     position: static;
     width: 35px;
     left: 50%;
@@ -88,20 +88,41 @@ html {
     }
 
 }
-.sipecka, .sipecka2 {
+.sipecka3 img:hover{
+    animation: arrow-ani-up 0.7s ease-in-out forwards;
+    animation-delay: 0.1s;
+}
+@keyframes arrow-ani-up{
+    0% {
+        transform: translate(0,0);
+    }
+    35% {
+        transform: translate(0,-8px);
+    }
+    80% {
+        transform: translate(0,6px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+
+}
+.sipecka, .sipecka2, .sipecka3 {
     display: flex;
     align-items: flex-end;
     justify-content: center;
     height: 83vh;
     width: 100%;
 }
-.sipecka2 {
-    height: 130vh;
+.sipecka2, .sipecka3 {
+    height: 70vh;
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }
-.sipecka2-posun{
-    left: 80%;
-    transform: translate(1800%);
+.sipecka2-posun, .sipecka3-posun{
+    transform: translate(-30vh);
+
 }
 /*sipecka popis click*/
 .s-click{
@@ -207,7 +228,9 @@ button:focus {
     text-decoration: none;
     border-radius: 1px;
 }
-
+.drp4 button{
+    padding: 0;
+}
 .dropdown button:hover {
     background-color:#34638042;
     transition: background-color 200ms ease-in;
@@ -461,8 +484,9 @@ button:focus {
     background-color: var(--section-bg);
     width: 100%;
     height: 80vh;
-
-
+}
+.section5{
+    height: 20vh;
 }
 .section3-a, .section4-a, .section5-a, .section6-a {
     background-color: var(--section-a-bg);
@@ -470,6 +494,12 @@ button:focus {
     height: 40vh;
     top: 0;
     scroll-snap-align: start;
+}
+.section5-a{
+    height: 20vh;
+}
+.section5-a{
+    height: 20vh;
 }
 .section3-b, .section4-b, .section5-b, .section6-b {
     background-color: var(--section-b-bg);
@@ -480,13 +510,16 @@ button:focus {
 }
 /*end of defining sections, time for stuff in the sections*/
 /*start of inside of the sections*/
-.sections-text-a, .sections-text-b{
+.sections-text-a, .sections-text-b,.sections-text-a-5{
     color: var(--sections-font);
     display: flex;
     align-items: center;
     line-height: 50%;
     font-weight: 300;
     height: 40vh;
+}
+.sections-text-a-5{
+    height: 20vh;
 }
 .sections-text-a h1, .sections-text-b h1{
     color: var(--sections-font);
@@ -520,7 +553,7 @@ button:focus {
 /*obrastek v sectionoch*/
 .members-icon-pos{
     position: relative;
-    left: 50%;
+    left: 62%;
     width: 0;
     height: 15vh;
     transform: translate(-25vh,-50%);
@@ -538,6 +571,14 @@ button:focus {
     height: 100px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
+}
+.discord-sc{
+    position: relative;
+    top: 4px;
+    left: 4px;
+    width: 92px;
+    height: 92px;
+
 }
 .twoimgcentering-test2{
     opacity: 0;
